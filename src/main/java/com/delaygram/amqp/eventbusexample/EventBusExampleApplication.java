@@ -17,14 +17,17 @@ public class EventBusExampleApplication {
         return args -> {
             System.out.println("This app uses Spring Profiles to control its behavior.\n");
             System.out.println("Running hello-world");
-            System.out.println("\tjava -jar event-bus-example-2.7.0.jar --spring.profiles.active=hello-world,sender");
-            System.out.println("\tjava -jar event-bus-example-2.7.0.jar --spring.profiles.active=hello-world,receiver\n");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=hello-world,sender");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=hello-world,receiver\n");
             System.out.println("Running work-queues");
-            System.out.println("\tjava -jar event-bus-example-2.7.0.jar --spring.profiles.active=work-queues,sender");
-            System.out.println("\tjava -jar event-bus-example-2.7.0.jar --spring.profiles.active=work-queues,receiver\n");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=work-queues,sender");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=work-queues,receiver\n");
             System.out.println("Running publish-subscribe");
-            System.out.println("\tjava -jar event-bus-example-2.7.0.jar --spring.profiles.active=pub-sub,sender --tutorial.client.duration=60000");
-            System.out.println("\tjava -jar event-bus-example-2.7.0.jar --spring.profiles.active=pub-sub,receiver --tutorial.client.duration=60000\n");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=pub-sub,sender --tutorial.client.duration=60000");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=pub-sub,receiver --tutorial.client.duration=60000\n");
+            System.out.println("Running routing");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=routing,sender --tutorial.client.duration=60000");
+            System.out.println("\tjava -jar target/event-bus-example-2.7.0.jar --spring.profiles.active=routing,receiver --tutorial.client.duration=60000\n");
         };
     }
 
