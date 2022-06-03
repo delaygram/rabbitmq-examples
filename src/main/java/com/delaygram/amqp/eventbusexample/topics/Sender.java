@@ -18,8 +18,7 @@ public class Sender {
     AtomicInteger index = new AtomicInteger(0);
     AtomicInteger count = new AtomicInteger(0);
 
-    private final String[] keys = {"quick.orange.rabbit", "lazy.orange.elephant", "quick.orange.fox",
-            "lazy.brown.fox", "lazy.pink.rabbit", "quick.brown.fox"};
+    private final String[] keys = {"fhict.sharepoint", "fhict.canvas"};
 
     @Scheduled(fixedDelay = 1000, initialDelay = 500)
     public void send() {
@@ -30,7 +29,7 @@ public class Sender {
         String key = keys[index.get()];
         builder.append(key).append(' ');
         builder.append(count.incrementAndGet());
-        String message = builder.toString();
+        String message = "I873955";
         template.convertAndSend(topic.getName(), key, message);
         System.out.println(" [x] Sent '" + message + "'");
     }

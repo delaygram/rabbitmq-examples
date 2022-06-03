@@ -11,7 +11,7 @@ public class Config {
 
     @Bean
     public TopicExchange topic() {
-        return new TopicExchange("delaygram.topic");
+        return new TopicExchange("ifontys.exchange");
     }
 
     @Profile("receiver")
